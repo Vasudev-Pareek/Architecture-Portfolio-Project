@@ -80,7 +80,7 @@ const ProjectAdd = () => {
         try {
             
             const res = await axios.post(
-            "http://localhost:5000/api/projects/add",
+            "https://architecture-portfolio-project-backend.onrender.com/api/projects/add",
             data
             );
 
@@ -96,7 +96,7 @@ const ProjectAdd = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-            const res = await axios.get("http://localhost:5000/api/projects/allCategory");
+            const res = await axios.get("https://architecture-portfolio-project-backend.onrender.com/api/projects/allCategory");
             setCategories(res.data); // assuming API returns array of categories
             } catch (error) {
             console.error("Error fetching categories:", error);
@@ -109,7 +109,7 @@ const ProjectAdd = () => {
     useEffect(() => {
         const fetchSubCategories = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/projects/allSubCategory");
+                const res = await axios.get("https://architecture-portfolio-project-backend.onrender.com/api/projects/allSubCategory");
 
                 setAllSubCategories(res.data);
                 setFilteredSubCategories(res.data); // default = all

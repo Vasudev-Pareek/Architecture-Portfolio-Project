@@ -8,7 +8,7 @@ const CustomerResponse = () => {
     useEffect(() => {
         const fetchResponses = async () => {
             try {
-            const res = await axios.get("http://localhost:5000/api/projects/getcustomerResponses");
+            const res = await axios.get("https://architecture-portfolio-project-backend.onrender.com/api/projects/getcustomerResponses");
             setResponses(res.data.data);
             setStats(res.data.stats);
             } catch (error) {

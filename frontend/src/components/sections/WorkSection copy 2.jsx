@@ -8,7 +8,7 @@ const WorkSection = ({ showCTA = true }) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/projects/all");
+        const res = await axios.get("https://architecture-portfolio-project-backend.onrender.com/api/projects/all");
         setProjects(res.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -78,7 +78,7 @@ const WorkSection = ({ showCTA = true }) => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
               style={{
-                backgroundImage: `url(${encodeURI(`http://localhost:5000/${project.image}`)})`,
+                backgroundImage: `url(${encodeURI(`https://architecture-portfolio-project-backend.onrender.com/${project.image}`)})`,
               }}
             />
 
