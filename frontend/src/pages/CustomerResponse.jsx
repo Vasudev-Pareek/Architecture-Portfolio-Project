@@ -8,7 +8,7 @@ const CustomerResponse = () => {
     useEffect(() => {
         const fetchResponses = async () => {
             try {
-            const res = await axios.get("https://architecture-portfolio-project-production.up.railway.app/api/projects/getcustomerResponses");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/getcustomerResponses`);
             setResponses(res.data.data);
             setStats(res.data.stats);
             } catch (error) {

@@ -10,7 +10,7 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await axios.get("https://architecture-portfolio-project-production.up.railway.app/api/projects/allCategory");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/allCategory`);
         setCategories(res.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -26,9 +26,9 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
     const fetchProjects = async () => {
       try {
         
-        // const res = await axios.get("https://architecture-portfolio-project-production.up.railway.app/api/projects?category=${category}");
+        // const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects?category=${category}`);
         console.log("cateogry:", category)
-        const res = await axios.get(`https://architecture-portfolio-project-production.up.railway.app/api/projects/all?category=${category}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/all?category=${category}`);
         setProjects(res.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -106,7 +106,7 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
               style={{
-                backgroundImage: `url(${encodeURI(`https://architecture-portfolio-project-production.up.railway.app/${project.image}`)})`,
+                backgroundImage: `url(${encodeURI(`${import.meta.env.VITE_API_URL}/${project.image}`)})`,
               }}
             />
 

@@ -80,7 +80,7 @@ const ProjectAdd = () => {
         try {
             
             const res = await axios.post(
-            "https://architecture-portfolio-project-production.up.railway.app/api/projects/add",
+            `${import.meta.env.VITE_API_URL}/api/projects/add`,
             data
             );
 
@@ -96,7 +96,7 @@ const ProjectAdd = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-            const res = await axios.get("https://architecture-portfolio-project-production.up.railway.app/api/projects/allCategory");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/allCategory`);
             setCategories(res.data); // assuming API returns array of categories
             } catch (error) {
             console.error("Error fetching categories:", error);
@@ -109,7 +109,7 @@ const ProjectAdd = () => {
     useEffect(() => {
         const fetchSubCategories = async () => {
             try {
-                const res = await axios.get("https://architecture-portfolio-project-production.up.railway.app/api/projects/allSubCategory");
+                const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/allSubCategory`);
 
                 setAllSubCategories(res.data);
                 setFilteredSubCategories(res.data); // default = all
