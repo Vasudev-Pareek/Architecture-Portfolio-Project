@@ -32,7 +32,7 @@ const ContactSection = () => {
         try {
 
             const res = await axios.post(
-                "https://architecture-portfolio-project-backend.onrender.com/api/projects/addcustomerResponses",
+                "https://architecture-portfolio-project-production.up.railway.app/api/projects/addcustomerResponses",
                 formData,
                 { headers: { "Content-Type": "application/json" } }
             );
