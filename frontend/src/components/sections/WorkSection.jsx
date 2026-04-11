@@ -46,7 +46,7 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
       <div className="flex flex-col gap-4 mb-12">
         <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
           <span className="w-8 h-[2px] bg-primary" />
-          Portfolio Index
+          Portfolio <Link to="/adminpage" className="">Index</Link>
         </div>
         <h1 className="text-slate-900 dark:text-slate-100 text-5xl md:text-6xl font-black leading-tight tracking-tight max-w-2xl">
           Curation of refined spaces.
