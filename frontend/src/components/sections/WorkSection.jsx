@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
+  const [selectedProject, setSelectedProject] = useState(null);
   const [projects, setProjects] = useState([]);
   const [category, setCategory] = useState("all");
   const [categories, setCategories] = useState([]);
@@ -101,6 +102,7 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
         {displayedProjects.map((project) => (
           <div
             key={project.id}
+            onClick={() => setSelectedProject(project)}
             className="group relative overflow-hidden rounded-xl h-[320px] cursor-pointer"
           >
             <div
@@ -157,6 +159,47 @@ const  WorkSection = ({ showCTA = true, limit = null, IsLimit = false }) => {
           </div>
         )}
       </div>
+
+      {/* Modal Code */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedProject(null)} // close on background click
+        >
+          <div
+            className="relative max-w-4xl w-full bg-white rounded-xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+          >
+            {/* Image */}
+            <img
+              src={`https://architecture-portfolio-project-backend.onrender.com/${selectedProject.image}`}
+              alt={selectedProject.title}
+              className="w-full max-h-[80vh] object-contain"
+            />
+
+            {/* Content */}
+            <div className="p-6">
+              <p className="text-primary text-sm font-bold">
+                {selectedProject.category}
+              </p>
+              <h2 className="text-2xl font-bold mt-2">
+                {selectedProject.title}
+              </h2>
+              <p className="text-gray-500 mt-1">
+                {selectedProject.subcategory}
+              </p>
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full px-3 py-1"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
