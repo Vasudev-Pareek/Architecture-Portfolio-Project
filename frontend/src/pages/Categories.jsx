@@ -9,7 +9,7 @@ const Categories = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/projects/allCategory`);
+            const res = await axios.get(`https://architecture-portfolio-project-backend.onrender.com/api/projects/allCategory`);
             setCategories(res.data); // assuming API returns array of categories
             } catch (error) {
             console.error("Error fetching categories:", error);
@@ -43,7 +43,7 @@ const Categories = () => {
 
         try {
             const res = await axios.post(
-            `${import.meta.env.VITE_API_URL}/api/projects/addCategory`,
+            `https://architecture-portfolio-project-backend.onrender.com/api/projects/addCategory`,
             formCategory,
             { headers: { "Content-Type": "application/json" } } 
             );
@@ -87,13 +87,13 @@ const Categories = () => {
             };
 
             // const res = await axios.post(
-            //     `${import.meta.env.VITE_API_URL}/api/projects/addSubCategory`, // ❌ make sure you have a separate API endpoint for subcategory
+            //     `https://architecture-portfolio-project-backend.onrender.com/api/projects/addSubCategory`, // ❌ make sure you have a separate API endpoint for subcategory
             //     payload,
             //     { headers: { "Content-Type": "application/json" } }
             // );
 
             const res = await axios.post(
-            `${import.meta.env.VITE_API_URL}/api/projects/addSubCategory`,
+            `https://architecture-portfolio-project-backend.onrender.com/api/projects/addSubCategory`,
             payload,
             { headers: { "Content-Type": "application/json" } }
             );

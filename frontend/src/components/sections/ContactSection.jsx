@@ -32,7 +32,7 @@ const ContactSection = () => {
         try {
 
             const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/projects/addcustomerResponses`,
+                `https://architecture-portfolio-project-backend.onrender.com/api/projects/addcustomerResponses`,
                 formData,
                 { headers: { "Content-Type": "application/json" } }
             );
