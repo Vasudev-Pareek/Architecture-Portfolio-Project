@@ -1,4 +1,5 @@
 import React from 'react'
+import Shreya_Profile_Image from '../../public/Shreya_Profile.png'
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
                 alt="Professional portrait of architect"
                 className="h-full w-full object-cover"
                 data-alt="Professional portrait of a female interior designer in a minimalist studio"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7ZgbxF7uLS5caVMqgX1sD46Ksi1lqlXlnTpWCRJOojxrIgFOLS3FIE7jcSS-HvTWzZRP10Nb94B0xECayKzRg6F8FFyrYaneIw_rfltGTMXfLo4aXtfzIizxgsww8idAhaV8eTsQjDHMrPfF3_RrpoTsmB3W_C3_cHdMyKxv2boPrUJ7xxybmR4DAIeXwvmdNZHLxIW1RvRLdb3C1TsvRhDGkwTw_LnOodXIqtKZyMlNkcinhzOIobis0PuWa9CtMm00Nfcb8wU"
+                src="/Shreya_Profile.png"
             />
             </div>
         </div>
@@ -26,11 +27,7 @@ const About = () => {
                 Design with <span className="text-primary italic">Purpose.</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                I am a spatial designer and architect focused on creating
-                harmonious, sustainable interiors that tell a story. My philosophy
-                centers on the intersection of functionality and soul. With over a
-                decade of experience across New York and London, I believe that a
-                space should not only look beautiful but feel intentional.
+                Architect specializing in hospitality and interior design, with hands-on experience in design development, client coordination, and execution-stage drawings. Skilled in translating concepts into practical, buildable solutions, with experience handling freelance and on-site projects independently. Focused on functional planning, aesthetics, and timely project delivery.
             </p>
             </div>
             <div className="grid grid-cols-2 gap-6 border-t border-slate-200 dark:border-slate-800 pt-8">
@@ -38,33 +35,41 @@ const About = () => {
                 <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
                 Location
                 </p>
-                <p className="mt-1 font-medium">New York, NY</p>
+                <p className="mt-1 font-medium">Bijapur, Karnataka, India</p>
             </div>
             <div>
                 <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
                 Experience
                 </p>
-                <p className="mt-1 font-medium">10+ Years</p>
+                <p className="mt-1 font-medium">1.5+ Years</p>
             </div>
             <div>
                 <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
                 Specialization
                 </p>
-                <p className="mt-1 font-medium">Luxury Residential</p>
+                <p className="mt-1 font-medium">Hospitality & Interior Design</p>
             </div>
             <div>
                 <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
                 Education
                 </p>
-                <p className="mt-1 font-medium">Master of Arch, RISD</p>
+                <p className="mt-1 font-medium">Bachelor of Architecture (B.Arch)</p>
             </div>
             </div>
-            <div className="flex gap-4 pt-4">
-            <button className="flex items-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-bold text-primary hover:bg-primary hover:text-white transition-all">
-                <span className="material-symbols-outlined">download</span>
-                Download CV
-            </button>
-            </div>
+                <div className="flex gap-4 pt-4">
+                    <a href="/Shreya_Bagewadi_CV.pdf" download>
+                        <button className="flex items-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-bold text-primary hover:bg-primary hover:text-white transition-all">
+                        <span className="material-symbols-outlined">download</span>
+                        Download CV
+                        </button>
+                    </a>
+                    <a href="/Shreya_Portfolio.pdf" download>
+                        <button className="flex items-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-bold text-primary hover:bg-primary hover:text-white transition-all">
+                        <span className="material-symbols-outlined">download</span>
+                        Download Portfolio
+                        </button>
+                    </a>
+                </div>
         </div>
         </section>
         <section className="mt-24 lg:mt-32">
@@ -80,9 +85,9 @@ const About = () => {
             <div className="relative flex flex-col md:flex-row md:items-center">
                 <div className="flex items-center md:w-1/2 md:justify-end md:pr-12">
                 <div className="hidden md:block text-right">
-                    <h3 className="text-xl font-bold">Senior Architect</h3>
-                    <p className="text-primary font-medium">Studio Luxe</p>
-                    <p className="text-sm text-slate-500">2018 - Present</p>
+                    <h3 className="text-xl font-bold">Architect</h3>
+                    <p className="text-primary font-medium">Nile Hotel Management Company</p>
+                    <p className="text-sm text-slate-500">Nov 2025 – Apr 2026 | Gandhidham, Gujarat</p>
                 </div>
                 </div>
                 <div className="absolute left-8 z-10 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-white shadow-xl md:left-1/2">
@@ -95,22 +100,19 @@ const About = () => {
                     <p className="text-sm text-slate-500">2018 - Present</p>
                 </div>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Leading high-end residential projects from concept to
-                    completion. Managing a team of 5 designers and coordinating with
-                    premium vendors globally.
+                    Developed layout planning and design concepts for hospitality projects. Produced working drawings, 3D models, and client presentations. Coordinated with consultants and assisted in material selection and detailing.
                 </p>
                 </div>
             </div>
             <div className="relative flex flex-col md:flex-row md:items-center">
                 <div className="pl-20 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                 <div className="mb-2">
-                    <h3 className="text-xl font-bold">Junior Designer</h3>
-                    <p className="text-primary font-medium">Urban Spaces</p>
-                    <p className="text-sm text-slate-500">2014 - 2018</p>
+                    <h3 className="text-xl font-bold">Interior & Architecture</h3>
+                    <p className="text-primary font-medium">Freelance</p>
+                    <p className="text-sm text-slate-500">Apr 2025 – Nov 2025 | Remote</p>
                 </div>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Collaborated on mixed-use urban developments. Specialized in
-                    sustainable material sourcing and ergonomic layout optimization.
+                    Handled end-to-end residential and small commercial projects. Created concept designs, layouts, and 3D visualizations. Managed client discussions and presentations independently.
                 </p>
                 </div>
                 <div className="absolute left-8 z-10 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-white dark:bg-slate-900 border-2 border-primary text-primary shadow-xl md:left-1/2">
@@ -127,16 +129,14 @@ const About = () => {
                 </div>
                 <div className="pl-20 md:w-1/2 md:pl-12">
                 <div className="mb-2">
-                    <h3 className="text-xl font-bold">Master of Architecture</h3>
+                    <h3 className="text-xl font-bold">Bachelor of Architecture (B.Arch)</h3>
                     <p className="text-primary font-medium">
-                    Rhode Island School of Design
+                    BLDEA’s V.P. Dr. P.G. Halakatti College of Engineering & Technology, Vijayapura
                     </p>
-                    <p className="text-sm text-slate-500">2011 - 2014</p>
+                    {/* <p className="text-sm text-slate-500">2011 - 2014</p> */}
                 </div>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Focused on environmental psychology and spatial narratives.
-                    Graduated with honors and received the President's Award for
-                    Innovation.
+                    Built a strong foundation in architectural design, spatial planning, and sustainable development.
                 </p>
                 </div>
             </div>
@@ -144,16 +144,15 @@ const About = () => {
                 <div className="pl-20 md:w-1/2 md:pr-12 md:pl-0 md:text-right">
                 <div className="mb-2">
                     <h3 className="text-xl font-bold">
-                    International Design Award
+                    Interior Designer
                     </h3>
                     <p className="text-primary font-medium">
-                    Excellence in Minimalism
+                    Andspaces
                     </p>
-                    <p className="text-sm text-slate-500">2022</p>
+                    <p className="text-sm text-slate-500">Dec 2024 – Apr 2025 | Pune, Maharashtra</p>
                 </div>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Awarded for the 'Serene Loft' project in Brooklyn, recognized
-                    for its innovative use of natural light and reclaimed materials.
+                    Worked on residential and commercial interiors. Developed space planning, mood boards, and 3D visuals while collaborating with senior designers and clients.
                 </p>
                 </div>
                 <div className="absolute left-8 z-10 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-primary text-white shadow-xl md:left-1/2">
