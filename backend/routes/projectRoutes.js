@@ -10,6 +10,13 @@ const {
   getSubCategory,
   addcustomerResponses,
   getcustomerResponses,
+  deleteAllData,
+  deleteProjectById,
+  deleteCategoryById,
+  deleteSubCategoryById,
+  deleteAllProjects,
+  deleteAllSubCategories,
+  deleteAllCategories,
   upload
 } = require("../controllers/projectController");
 
@@ -27,5 +34,16 @@ router.get("/allSubCategory", getSubCategory);
 //   console.log("SUBCATEGORY API HIT");
 //   res.send("working");
 // });
+
+
+// Delete API
+router.delete("/delete-all", deleteAllData);
+router.delete("/projects/:id", deleteProjectById);
+router.delete("/categories/:id", deleteCategoryById);
+router.delete("/subcategories/:id", deleteSubCategoryById);
+
+router.delete("/projects/delete-all", deleteAllProjects);
+router.delete("/subcategories/delete-all", deleteAllSubCategories);
+router.delete("/categories/delete-all", deleteAllCategories);
 
 module.exports = router;

@@ -282,6 +282,103 @@ const addcustomerResponses = (req, res) => {
 };
 
 
+// Delete Data ----------
+
+const deleteProjectById = (req, res) => {
+  const { id } = req.params;
+
+  const sql = "DELETE FROM projects WHERE id = $1";
+
+  db.query(sql, [id], (err, result) => {
+    if (err) return res.status(500).json(err);
+
+    res.json({ message: "Project deleted successfully" });
+  });
+};
+
+
+const deleteCategoryById = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // delete related subcategories first
+    await db.query("DELETE FROM project_subcategories WHERE category_id = $1", [id]);
+
+    // delete related projects
+    await db.query("DELETE FROM projects WHERE category = $1", [id]);
+
+    // delete category
+    await db.query("DELETE FROM project_categories WHERE id = $1", [id]);
+
+    res.json({ message: "Category deleted successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
+
+const deleteSubCategoryById = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // delete related projects (if linked)
+    await db.query("DELETE FROM projects WHERE subcategory_id = $1", [id]);
+
+    // delete subcategory
+    await db.query("DELETE FROM project_subcategories WHERE id = $1", [id]);
+
+    res.json({ message: "SubCategory deleted successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
+
+// DELETE ALL (projects, subcategories, categories)
+const deleteAllData = async (req, res) => {
+  try {
+    await db.query("DELETE FROM projects");
+    await db.query("DELETE FROM project_subcategories");
+    await db.query("DELETE FROM project_categories");
+
+    res.json({ message: "All data deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to delete data" });
+  }
+};
+
+const deleteAllProjects = async (req, res) => {
+  try {
+    await db.query("DELETE FROM projects");
+    res.json({ message: "All projects deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to delete projects" });
+  }
+};
+
+const deleteAllSubCategories = async (req, res) => {
+  try {
+    await db.query("DELETE FROM project_subcategories");
+    res.json({ message: "All subcategories deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to delete subcategories" });
+  }
+};
+
+const deleteAllCategories = async (req, res) => {
+  try {
+    await db.query("DELETE FROM project_categories");
+    res.json({ message: "All categories deleted successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to delete categories" });
+  }
+};
+
+
 module.exports = {
   addProject,
   getProjects,
@@ -291,5 +388,12 @@ module.exports = {
   addSubCategory,
   addcustomerResponses,
   getcustomerResponses,
+  deleteAllData,
+  deleteProjectById,
+  deleteCategoryById,
+  deleteSubCategoryById,
+  deleteAllProjects,
+  deleteAllSubCategories,
+  deleteAllCategories,
   upload
 };
