@@ -37,13 +37,17 @@ router.get("/allSubCategory", getSubCategory);
 
 
 // Delete API
-router.delete("/delete-all", deleteAllData);
+// FIRST: specific routes
+router.delete("/projects/delete-all", deleteAllProjects);
+router.delete("/subcategories/delete-all", deleteAllSubCategories);
+router.delete("/categories/delete-all", deleteAllCategories);
+
+// THEN: dynamic routes
 router.delete("/projects/:id", deleteProjectById);
 router.delete("/categories/:id", deleteCategoryById);
 router.delete("/subcategories/:id", deleteSubCategoryById);
 
-router.delete("/projects/delete-all", deleteAllProjects);
-router.delete("/subcategories/delete-all", deleteAllSubCategories);
-router.delete("/categories/delete-all", deleteAllCategories);
+// global delete
+router.delete("/delete-all", deleteAllData);
 
 module.exports = router;
