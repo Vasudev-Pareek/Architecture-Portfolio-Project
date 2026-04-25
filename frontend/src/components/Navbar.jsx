@@ -13,7 +13,7 @@ const Navbar = () => {
             grid_view
             </span>
             <h2 className="text-xl font-medium tracking-[0.2em] uppercase">
-            Seru Studio
+            SB Studio
             </h2>
         </div>
         <nav className="hidden lg:flex items-center gap-12">

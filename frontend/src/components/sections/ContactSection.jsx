@@ -74,9 +74,7 @@ const ContactSection = () => {
                         Studio Location
                         </h4>
                         <p className="text-neutral-300 text-sm leading-relaxed">
-                        24 Savile Row, Mayfair
-                        <br />
-                        London W1S 3PR, UK
+                            Bijapur, Karnataka, India
                         </p>
                     </div>
                     <div>
@@ -84,9 +82,9 @@ const ContactSection = () => {
                         New Business
                         </h4>
                         <p className="text-neutral-300 text-sm leading-relaxed">
-                        hello@aurastudio.com
+                         Ar.shreyab.2002@gmail.com
                         <br />
-                        +44 (0) 20 7946 0123
+                            (+91) 87339 88913
                         </p>
                     </div>
                     </div>

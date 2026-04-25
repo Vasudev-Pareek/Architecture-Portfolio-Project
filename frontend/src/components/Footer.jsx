@@ -11,7 +11,7 @@ const Footer = () => {
                 </span>
                 <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.3em]">
-                    Seru Studio
+                    SB Studio
                     </p>
                     <p className="text-[9px] text-neutral-500 uppercase tracking-widest mt-1">
                     © 2026 Architectural Design Studio
