@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             <div className="relative z-20 text-center px-6 max-w-6xl">
             <p className="text-white text-xs uppercase tracking-[0.8em] mt-[280px] font-light">
-                Architectural Excellence • Since 2010
+                Architectural Excellence • Since 2024
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center mt-5 gap-8">
