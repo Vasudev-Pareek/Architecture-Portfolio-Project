@@ -91,22 +91,22 @@ const ContactSection = () => {
                     <div className="flex gap-8">
                     <a
                         className="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors"
-                        href="#"
+                        href="https://www.instagram.com/ar.shreya_bagewadi?igsh=MWszYXNnOWt4bm9vcQ=="
                     >
                         Instagram
                     </a>
                     <a
                         className="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors"
-                        href="#"
+                        href="https://www.linkedin.com/in/shreya-bagewadi-17952121b/"
                     >
                         LinkedIn
                     </a>
-                    <a
+                    {/* <a
                         className="text-[10px] font-bold uppercase tracking-widest text-white hover:text-primary transition-colors"
                         href="#"
                     >
                         Pinterest
-                    </a>
+                    </a> */}
                     </div>
                 </div>
                 <div className="bg-white p-12 lg:p-16 rounded-xl">
